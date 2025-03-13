@@ -1,0 +1,125 @@
+### Register a new user
+POST http://localhost:8000/api/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "user"
+}
+
+### Login a user
+POST http://localhost:8000/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+
+
+### Contact
+POST http://localhost:8000/api/contacts
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Aouad Mohammed",
+  "email": "aouad6@gmail.com",
+  "phone": "0689104243",
+  "message": "test tsest"
+}
+
+
+
+
+### Get all cars 
+GET http://localhost:8000/api/cars
+Accept: application/json
+
+
+### Create a new car 
+POST http://localhost:8000/api/cars
+Accept: application/json
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Corolla",
+  "year": 2020,
+  "price_per_day": 50,
+  "is_available": 1,
+  "image": "https://example.com/toyota-corolla.jpg"
+}
+
+### Get a specific car
+GET http://localhost:8000/api/cars/71
+Accept: application/json
+
+
+### Update a car 
+PUT http://localhost:8000/api/cars/71
+Accept: application/json
+Content-Type: application/json
+
+{
+  "model":"ggcg",
+}
+
+### Delete a car (requires authentication)
+DELETE http://localhost:8000/api/cars/1
+Accept: application/json
+
+
+### Create a new booking 
+POST http://localhost:8000/api/bookings
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "user_id": 3,
+  "car_id": 10,
+  "start_date": "2023-10-01",
+  "end_date": "2023-10-05",
+  "total_price": 250
+}
+
+### Get all bookings (requires authentication)
+GET http://localhost:8000/api/bookings
+Accept: application/json
+
+
+### Get a specific booking (requires authentication)
+GET http://localhost:8000/api/bookings/1
+Accept: application/json
+
+
+### Update a booking (requires authentication)
+PUT http://localhost:8000/api/bookings/6
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "total_price": 789
+}
+
+### Delete a booking (requires authentication)
+DELETE http://localhost:8000/api/bookings/2
+Accept: application/json
+
+
+### Logout the user (requires authentication)
+POST http://localhost:8000/api/logout
+Accept: application/json
+Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
+
+### Get the authenticated user's profile (requires authentication)
+GET http://localhost:8000/api/profile
+Accept: application/json
+Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
