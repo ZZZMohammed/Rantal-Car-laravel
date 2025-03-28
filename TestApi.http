@@ -89,17 +89,17 @@ Content-Type: application/json
   "total_price": 250
 }
 
-### Get all bookings (requires authentication)
+### Get all bookings 
 GET http://localhost:8000/api/bookings
 Accept: application/json
 
 
-### Get a specific booking (requires authentication)
+### Get a specific booking 
 GET http://localhost:8000/api/bookings/1
 Accept: application/json
 
 
-### Update a booking (requires authentication)
+### Update a booking
 PUT http://localhost:8000/api/bookings/6
 Accept: application/json
 Content-Type: application/json
@@ -109,7 +109,7 @@ Content-Type: application/json
   "total_price": 789
 }
 
-### Delete a booking (requires authentication)
+### Delete a booking 
 DELETE http://localhost:8000/api/bookings/2
 Accept: application/json
 
@@ -123,3 +123,6 @@ Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
 GET http://localhost:8000/api/profile
 Accept: application/json
 Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
+
+
+

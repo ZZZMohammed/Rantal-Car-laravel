@@ -15,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
         // Add CORS middleware to the global middleware stack
         $middleware->append(\Illuminate\Http\Middleware\HandleCors::class);
         $middleware->append(\App\Http\Middleware\CorsMiddleware::class);
+        $middleware->append(\App\Http\Middleware\SetLocale::class);
 
         // CSRF protection exclusion for API routes
         $middleware->validateCsrfTokens([

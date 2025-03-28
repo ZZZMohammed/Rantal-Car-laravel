@@ -28,3 +28,13 @@ Route::prefix('api')->group(function () {
         Route::get('/profile', [UserController::class, 'profile']); // User profile
     });
 });
+
+
+
+
+// loca;ization
+
+Route::get('/change-lang/{lang}', function ($lang) {
+    session(['locale' => $lang]);
+    return back();
+});
