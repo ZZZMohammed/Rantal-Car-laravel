@@ -1,13 +1,14 @@
+
 ### Register a new user
 POST http://localhost:8000/api/register
 Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "John Doe",
+  "name": "Aouad mohammed",
   "email": "john@example.com",
   "password": "password123",
-  "role": "user"
+  "role": "admin"
 }
 
 ### Login a user
@@ -57,7 +58,7 @@ Content-Type: application/json
 }
 
 ### Get a specific car
-GET http://localhost:8000/api/cars/71
+GET http://localhost:8000/api/cars/100
 Accept: application/json
 
 
@@ -122,7 +123,7 @@ Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
 ### Get the authenticated user's profile (requires authentication)
 GET http://localhost:8000/api/profile
 Accept: application/json
-Authorization: Bearer 5|cLUFL2iEohxvm4Qd8nOlt4EPnEL0Pl01AEmMa8G520c700da
+Authorization: Bearer 96|nP6U8DusfpONX2uvB2wkBaS7JzPsZkLtJeyGJBIOa66147a7
 
 
 

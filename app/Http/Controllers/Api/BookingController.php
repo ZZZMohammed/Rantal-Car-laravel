@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -13,7 +14,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::with(['user', 'car'])->get();
+        $user = Auth::user();
+        $bookings = Booking::where('user_id', $user->id)->get(); // Fetch bookings by the logged-in user
         return response()->json($bookings);
     }
 
