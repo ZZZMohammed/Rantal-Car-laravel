@@ -15,7 +15,7 @@ class BookingController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $bookings = Booking::where('user_id', $user->id)->get(); // Fetch bookings by the logged-in user
+        $bookings = Booking::where('user_id', $user->id)->get(); 
         return response()->json($bookings);
     }
 
@@ -66,9 +66,17 @@ class BookingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        Booking::destroy($id) ;
-        return response()->json("Booking was deleted");
-    }
+   public function destroy(string $id){
+
+        $booking = Booking::findOrFail($id);
+        $user = Auth::user();
+        
+        if(!($user->role === 'admin' || $booking->user_id === $user->id)) {
+            return response()->json(['message' => 'Unauthorized'], 403);
+        }
+
+        $booking->delete();
+        return response()->json(['message' => 'Booking was deleted']);  
+        
+}
 }

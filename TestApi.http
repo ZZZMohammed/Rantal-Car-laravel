@@ -6,9 +6,9 @@ Content-Type: application/json
 
 {
   "name": "Aouad mohammed",
-  "email": "admin@example.com",
+  "email": "user1@example.com",
   "password": "password123",
-  "role": "admin"
+  "role": "user"
 }
 
 ### Login a user
@@ -17,7 +17,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "user1@example.com",
   "password": "password123"
 }
 
@@ -78,13 +78,14 @@ Accept: application/json
 
 ### Create a new booking 
 POST http://localhost:8000/api/bookings
+Authorization: Bearer 8|o7HFlSvJnMh3CnxmriuAorP3bEJkzf4ZBCMfTKWe52cf3bf4
 Accept: application/json
 Content-Type: application/json
 
 
 {
-  "user_id": 3,
-  "car_id": 10,
+  "user_id": 63,
+  "car_id": 70,
   "start_date": "2023-10-01",
   "end_date": "2023-10-05",
   "total_price": 250
@@ -111,8 +112,8 @@ Content-Type: application/json
 }
 
 ### Delete a booking 
-DELETE http://localhost:8000/api/bookings/72
-Authorization: Bearer 7|Rpdzc1pBIOUe33qsoLRSZVMt28ocnASUbaqo13Wwf0ffd086
+DELETE http://localhost:8000/api/bookings/51
+Authorization: Bearer 8|o7HFlSvJnMh3CnxmriuAorP3bEJkzf4ZBCMfTKWe52cf3bf4
 Accept: application/json
 
 

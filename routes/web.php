@@ -13,9 +13,9 @@ Route::get('/', function () {
 
 // API Routes
 Route::prefix('api')->group(function () {
-    // Public routes (no authentication required)
-    Route::post('/register', [UserController::class, 'register']); // User registration
-    Route::post('/login', [UserController::class, 'login']); // User login
+    
+    Route::post('/register', [UserController::class, 'register']); 
+    Route::post('/login', [UserController::class, 'login']); 
     
    
   
@@ -24,20 +24,13 @@ Route::prefix('api')->group(function () {
     // Protected routes (require authentication)
     Route::middleware('auth:sanctum')->group(function () {
     
-        Route::post('/logout', [UserController::class, 'logout']); // User logout
-        Route::get('/profile', [UserController::class, 'profile']); // User profile
-        Route::apiResource('bookings', BookingController::class); // Bookings routes
-        Route::apiResource('cars', CarController::class); // Cars routes
-        Route::post('/contacts', [ContactController::class, 'store']); // Only store method for contacts
+        Route::post('/logout', [UserController::class, 'logout']); 
+        Route::get('/profile', [UserController::class, 'profile']); 
+        Route::apiResource('bookings', BookingController::class); 
+        Route::apiResource('cars', CarController::class); 
+        Route::post('/contacts', [ContactController::class, 'store']); 
     });
 });
 
 
 
-
-// loca;ization
-
-Route::get('/change-lang/{lang}', function ($lang) {
-    session(['locale' => $lang]);
-    return back();
-});
