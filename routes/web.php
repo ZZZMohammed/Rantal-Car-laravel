@@ -16,9 +16,9 @@ Route::prefix('api')->group(function () {
     // Public routes (no authentication required)
     Route::post('/register', [UserController::class, 'register']); // User registration
     Route::post('/login', [UserController::class, 'login']); // User login
-    Route::apiResource('cars', CarController::class); // Cars routes
-    Route::apiResource('bookings', BookingController::class); // Bookings routes
-    Route::post('/contacts', [ContactController::class, 'store']); // Only store method for contacts
+    
+   
+  
 
 
     // Protected routes (require authentication)
@@ -26,6 +26,9 @@ Route::prefix('api')->group(function () {
     
         Route::post('/logout', [UserController::class, 'logout']); // User logout
         Route::get('/profile', [UserController::class, 'profile']); // User profile
+        Route::apiResource('bookings', BookingController::class); // Bookings routes
+        Route::apiResource('cars', CarController::class); // Cars routes
+        Route::post('/contacts', [ContactController::class, 'store']); // Only store method for contacts
     });
 });
 
