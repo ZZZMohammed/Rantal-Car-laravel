@@ -58,7 +58,7 @@ Content-Type: application/json
 }
 
 ### Get a specific car
-GET http://localhost:8000/api/cars/100
+GET http://localhost:8000/api/cars/70
 Accept: application/json
 
 
