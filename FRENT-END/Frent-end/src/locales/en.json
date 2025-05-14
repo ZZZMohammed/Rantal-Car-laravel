@@ -1,0 +1,49 @@
+{
+  "home": {
+    "hero_title": "Find Your Best Car",
+    "hero_subtitle": "Explore our wide range of cars and find the perfect one for you.",
+    "cta_button": "Explore Cars",
+    "features_title": "Awesome Features",
+    "feature1_title": "Wide Selection",
+    "feature1_desc": "Choose from a variety of cars to suit your needs.",
+    "feature2_title": "Affordable Prices",
+    "feature2_desc": "Get the best deals on car rentals.",
+    "feature3_title": "Easy Booking",
+    "feature3_desc": "Book your car in just a few clicks.",
+    "typing_text1": "Welcome to Our Car Rental!",
+    "typing_text2": "Find Your Perfect Ride!",
+    "subtitle": "Explore our wide range of cars and find the perfect one for you.",
+    "find_car_button": "Find a Car",
+    "features_title": "Why Choose Us?",
+    "feature1_title": "Affordable Prices",
+    "feature1_desc": "Best deals on car rentals.",
+    "feature2_title": "Wide Selection",
+    "feature2_desc": "Many car types to choose from.",
+    "feature3_title": "24/7 Support",
+    "feature3_desc": "We are always here to help." ,
+    "features_title": "Awesome Features",
+    "feature1_title": "Simple Booking",
+    "feature1_desc": "Book your car in just a few clicks.",
+    "feature2_title": "Insurance Included",
+    "feature2_desc": "Drive stress-free with full coverage.",
+    "feature3_title": "Secure Payment",
+    "feature3_desc": "Fast and secure payment options.",
+    "feature4_title": "24/7 Support",
+    "feature4_desc": "We're here to help anytime."
+  },
+  "navbar": {
+    "brand": "Tif-Cars",
+    "home": "Home",
+    "about": "About Us",
+    "find_car": "Find a Car",
+    "contact": "Contact Us",
+    "login": "Login",
+    "logout": "Logout",
+    "book_now": "Book Now",
+    "language_switcher": {
+      "en": "English",
+      "fr": "Français",
+      "ar": "العربية"
+    }
+  }
+}

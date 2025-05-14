@@ -26,8 +26,8 @@ Route::prefix('api')->group(function () {
     
         Route::post('/logout', [UserController::class, 'logout']); 
         Route::get('/profile', [UserController::class, 'profile']); 
-        Route::apiResource('bookings', BookingController::class); 
-        Route::apiResource('cars', CarController::class); 
+        Route::apiResource('/bookings', BookingController::class); 
+        Route::apiResource('/cars', CarController::class); 
         Route::post('/contacts', [ContactController::class, 'store']); 
     });
 });

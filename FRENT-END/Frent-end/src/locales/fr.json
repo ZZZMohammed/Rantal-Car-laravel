@@ -1,0 +1,49 @@
+{
+  "home": {
+    "hero_title": "Trouvez Votre Meilleure Voiture",
+    "hero_subtitle": "Découvrez notre large gamme de voitures et trouvez celle qui vous convient.",
+    "cta_button": "Explorer les Voitures",
+    "features_title": "Fonctionnalités Géniales",
+    "feature1_title": "Large Sélection",
+    "feature1_desc": "Choisissez parmi une variété de voitures adaptées à vos besoins.",
+    "feature2_title": "Prix Abordables",
+    "feature2_desc": "Obtenez les meilleures offres de location de voitures.",
+    "feature3_title": "Réservation Facile",
+    "feature3_desc": "Réservez votre voiture en quelques clics." ,
+    "typing_text1": "Bienvenue dans notre location de voitures !",
+    "typing_text2": "Trouvez votre voiture idéale !",
+    "subtitle": "Explorez notre large gamme de voitures et trouvez celle qui vous convient.",
+    "find_car_button": "Trouver une voiture",
+    "features_title": "Pourquoi nous choisir ?",
+    "feature1_title": "Prix abordables",
+    "feature1_desc": "Les meilleures offres de location de voitures.",
+    "feature2_title": "Large sélection",
+    "feature2_desc": "Un grand choix de voitures.",
+    "feature3_title": "Assistance 24/7",
+    "feature3_desc": "Nous sommes toujours là pour vous aider." ,
+    "features_title": "Fonctionnalités Géniales",
+    "feature1_title": "Réservation Facile",
+    "feature1_desc": "Réservez votre voiture en quelques clics.",
+    "feature2_title": "Assurance Incluse",
+    "feature2_desc": "Roulez sans stress avec une couverture complète.",
+    "feature3_title": "Paiement Sécurisé",
+    "feature3_desc": "Options de paiement rapides et sécurisées.",
+    "feature4_title": "Support 24/7",
+    "feature4_desc": "Nous sommes là pour vous aider à tout moment."
+  },
+  "navbar": {
+    "brand": "Tif-Cars",
+    "home": "Accueil",
+    "about": "À Propos",
+    "find_car": "Trouver une Voiture",
+    "contact": "Contactez-Nous",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "book_now": "Réserver ",
+    "language_switcher": {
+      "en": "Anglais",
+      "fr": "Français",
+      "ar": "Arabe"
+    }
+  }
+}

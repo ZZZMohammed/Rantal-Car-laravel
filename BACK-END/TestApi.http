@@ -40,6 +40,7 @@ Content-Type: application/json
 
 ### Get all cars 
 GET http://localhost:8000/api/cars
+Authorization: Bearer 11|XPIrBNezOwoYTKXBLwzwc7slpUzyjCRcIiLsVv99b8b4e712
 Accept: application/json
 
 
