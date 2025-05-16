@@ -16,10 +16,10 @@ class BookingController extends Controller
         $user = Auth::user();
         
         if ($user->role === 'admin') {
-            // Admin can see all bookings with user and car relationships
+            
             $bookings = Booking::with(['user', 'car'])->get();
         } else {
-            // Regular users only see their own bookings with car information
+           
             $bookings = Booking::with(['car'])
                 ->where('user_id', $user->id)
                 ->get();

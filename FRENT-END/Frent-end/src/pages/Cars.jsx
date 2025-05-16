@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCars } from '../../redux/actions/BookAction';
+import { fetchCars } from '../redux/actions/BookAction';
 
 export default function Cars() {
   const dispatch = useDispatch();
