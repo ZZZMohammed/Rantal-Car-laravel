@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const [bookings, setBookings] = useState([]);
@@ -98,8 +99,9 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="container mt-5">
+      <div className="container pt-5">
         <h2>Dashboard - Bookings</h2>
+        
         <div className="d-flex justify-content-center">
           <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -124,6 +126,7 @@ export default function Dashboard() {
   }
 
   return (
+    <>
     <div className="container mt-5">
       <h2>Dashboard - Bookings</h2>
       {bookings.length === 0 ? (
@@ -170,5 +173,8 @@ export default function Dashboard() {
         </div>
       )}
     </div>
+    <h2> <Link to={'/cars'}>Dashboard - Bookings</Link></h2>
+    </>
+
   );
 }

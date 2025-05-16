@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Car;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class CarController extends Controller
 {
@@ -13,8 +14,9 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all() ;
-        return response()->json($cars) ;
+        // Allow all authenticated users to view cars
+        $cars = Car::all();
+        return response()->json($cars);
     }
 
     /**
@@ -22,54 +24,69 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        // Check if user is admin
+        if (Auth::user()->role !== 'admin') {
+            return response()->json(['message' => 'Unauthorized'], 403);
+        }
+
         $request->validate([
-            'brand'=>'required|string',
-            'model'=>'required|string',
-            'year'=>'required|integer',
+            'brand' => 'required|string',
+            'model' => 'required|string',
+            'year' => 'required|integer',
             'price_per_day' => 'required|numeric',
             'is_available' => 'boolean',
             'image' => 'nullable|string',
         ]);
 
-        $car = Car::create($request->all()) ;
-        return response()->json(['message' => 'car created successfully', 'book' => $car], 201) ;
+        $car = Car::create($request->all());
+        return response()->json(['message' => 'Car created successfully', 'car' => $car], 201);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show( $id)
+    public function show($id)
     {
-        $car = Car::findOrFail($id) ;
-        return response()->json($car) ;
+        // Allow all authenticated users to view single car
+        $car = Car::findOrFail($id);
+        return response()->json($car);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
+        // Check if user is admin
+        if (Auth::user()->role !== 'admin') {
+            return response()->json(['message' => 'Unauthorized'], 403);
+        }
+
         $request->validate([
-            'brand'=>'string',
-            'model'=>'string',
-            'year'=>'integer',
+            'brand' => 'string',
+            'model' => 'string',
+            'year' => 'integer',
             'price_per_day' => 'numeric',
             'is_available' => 'boolean',
             'image' => 'nullable|string',
         ]);
 
-        $car = Car::findOrFail($id) ;
-        $car->update($request->all()) ;
+        $car = Car::findOrFail($id);
+        $car->update($request->all());
         return response()->json($car);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
-        Car::destroy($id) ;
-        return response()->json("car was deleted");
+        // Check if user is admin
+        if (Auth::user()->role !== 'admin') {
+            return response()->json(['message' => 'Unauthorized'], 403);
+        }
 
+        Car::destroy($id);
+        return response()->json(['message' => 'Car was deleted successfully']);
     }
 }

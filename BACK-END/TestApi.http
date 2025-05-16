@@ -17,7 +17,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "user1@example.com",
+  "email": "admin@example.com",
   "password": "password123"
 }
 
@@ -40,12 +40,13 @@ Content-Type: application/json
 
 ### Get all cars 
 GET http://localhost:8000/api/cars
-Authorization: Bearer 11|XPIrBNezOwoYTKXBLwzwc7slpUzyjCRcIiLsVv99b8b4e712
+Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
 Accept: application/json
 
 
 ### Create a new car 
 POST http://localhost:8000/api/cars
+Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
 Accept: application/json
 Content-Type: application/json
 
@@ -59,21 +60,24 @@ Content-Type: application/json
 }
 
 ### Get a specific car
-GET http://localhost:8000/api/cars/70
+GET http://localhost:8000/api/cars/71
+Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
 Accept: application/json
 
 
 ### Update a car 
 PUT http://localhost:8000/api/cars/71
+Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
 Accept: application/json
 Content-Type: application/json
 
 {
-  "model":"ggcg",
+  "brand":"hi",
 }
 
 ### Delete a car (requires authentication)
-DELETE http://localhost:8000/api/cars/1
+DELETE http://localhost:8000/api/cars/71
+Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
 Accept: application/json
 
 
