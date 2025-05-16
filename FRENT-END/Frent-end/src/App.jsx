@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import { Register } from "./pages/register";
 import Dashboard from "./pages/dashboard";
 import MyBookings from "./pages/MyBookings";
+import Cars from './pages/ADMIN/Cars'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/details" component={<MyBookings />} />
+         <Route path="/cars" component={<Cars />} />
         
       </Routes>
       <Footer />
