@@ -18,7 +18,7 @@ return [
     'paths' => ['api/*', 'sanctum/csrf-cookie'], // Paths to apply CORS to
     'allowed_methods' => ['*'], // Allow all HTTP methods
     'allowed_origins' => [
-        'http://localhost:5173' , 'http://localhost:5174'], // Replace with your React app's URL
+    'http://localhost:5173' ], 
     'allowed_origins_patterns' => [], // Regex patterns for allowed origins
     'allowed_headers' => ['*'], // Allow all headers
     'exposed_headers' => [], // Headers to expose to the client

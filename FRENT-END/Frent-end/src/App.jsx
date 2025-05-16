@@ -27,7 +27,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/details" component={<MyBookings />} />
-         <Route path="/cars" component={<Cars />} />
+        <Route path="/cars" element={<Cars/>} />
         
       </Routes>
       <Footer />
