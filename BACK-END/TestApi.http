@@ -83,7 +83,7 @@ Accept: application/json
 
 ### Create a new booking 
 POST http://localhost:8000/api/bookings
-Authorization: Bearer 8|o7HFlSvJnMh3CnxmriuAorP3bEJkzf4ZBCMfTKWe52cf3bf4
+Authorization: Bearer 26|GMAFoaegkahoq2QvrulCIVJxDWK820sIu8n4NEEXbec5fa83
 Accept: application/json
 Content-Type: application/json
 
@@ -98,6 +98,7 @@ Content-Type: application/json
 
 ### Get all bookings 
 GET http://localhost:8000/api/bookings
+Authorization: Bearer 26|GMAFoaegkahoq2QvrulCIVJxDWK820sIu8n4NEEXbec5fa83
 Accept: application/json
 
 
