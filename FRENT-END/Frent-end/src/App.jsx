@@ -30,7 +30,7 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

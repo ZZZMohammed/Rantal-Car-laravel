@@ -27,7 +27,7 @@ export default function Navbar() {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Accept': 'application/json',
-            'Accept-Language': i18n.language, // Send current language to backend
+            'Accept-Language': i18n.language, 
           },
         });
         if (response.ok) {
@@ -80,6 +80,9 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={'/Contact'}>{t('navbar.contact')}</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={'/details'}>{t('navbar.My Booking')}</Link>
               </li>
             </ul>
           </div>
