@@ -26,7 +26,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/details" component={<MyBookings />} />
+        <Route path="/details" element={<MyBookings />} />
         <Route path="/cars" element={<Cars />} />
         
       </Routes>
