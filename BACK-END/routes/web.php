@@ -21,7 +21,7 @@ Route::prefix('api')->group(function () {
   
 
 
-    // Protected routes (require authentication)
+    
     Route::middleware('auth:sanctum')->group(function () {
     
         Route::post('/logout', [UserController::class, 'logout']); 

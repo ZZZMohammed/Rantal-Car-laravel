@@ -17,7 +17,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
+  "email": "user1@example.com",
   "password": "password123"
 }
 
@@ -40,13 +40,13 @@ Content-Type: application/json
 
 ### Get all cars 
 GET http://localhost:8000/api/cars
-Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
+Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
 Accept: application/json
 
 
 ### Create a new car 
 POST http://localhost:8000/api/cars
-Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
+Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
 Accept: application/json
 Content-Type: application/json
 
@@ -67,12 +67,12 @@ Accept: application/json
 
 ### Update a car 
 PUT http://localhost:8000/api/cars/71
-Authorization: Bearer 23|L0tWx1nYUmjiA1dJGVJnAypYV1AEjyanazscatG7c50f3ebd
+Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
 Accept: application/json
 Content-Type: application/json
 
 {
-  "brand":"hi",
+  "brand":"hsi",
 }
 
 ### Delete a car (requires authentication)
