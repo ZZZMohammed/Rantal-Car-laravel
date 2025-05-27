@@ -12,12 +12,22 @@ class CarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        // Allow all authenticated users to view cars
-        $cars = Car::all();
-        return response()->json($cars);
+   public function index(Request $request)
+{
+    $query = Car::query();
+
+    // Check if is_available filter exists in query parameters
+    if ($request->has('is_available')) {
+        $isAvailable = filter_var($request->query('is_available'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+        if (!is_null($isAvailable)) {
+            $query->where('is_available', $isAvailable);
+        }
     }
+
+    $cars = $query->get();
+
+    return response()->json($cars);
+}
 
     /**
      * Store a newly created resource in storage.

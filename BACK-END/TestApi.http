@@ -1,3 +1,7 @@
+##
+GET http://localhost:8000/api/user
+Accept: application/json
+Authorization: Bearer 35|kCEqcQGZ2piDbMmJvzSJROtYHMXfYvSIx3qFXVpxac3eccd9
 
 ### Register a new user
 POST http://localhost:8000/api/register
@@ -17,7 +21,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "user1@example.com",
+  "email": "admin@example.com",
   "password": "password123"
 }
 
@@ -39,8 +43,8 @@ Content-Type: application/json
 
 
 ### Get all cars 
-GET http://localhost:8000/api/cars
-Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
+GET http://localhost:8000/api/cars?is_available=true
+Authorization: Bearer 32|dlWnai2yNoBmIzeklWIDp2p9CO2dSCOoOnWbBdUNf4b32a7e
 Accept: application/json
 
 
@@ -98,7 +102,7 @@ Content-Type: application/json
 
 ### Get all bookings 
 GET http://localhost:8000/api/bookings
-Authorization: Bearer 26|GMAFoaegkahoq2QvrulCIVJxDWK820sIu8n4NEEXbec5fa83
+Authorization: Bearer 28|uDgExG5spMthDfb2MpN3BZLcjqZJPPzO9k3FQI4p603ad35b
 Accept: application/json
 
 

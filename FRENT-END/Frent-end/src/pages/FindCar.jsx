@@ -4,31 +4,60 @@ import { Link } from "react-router-dom";
 
 export default function FindCar() {
   const [cars, setCars] = useState([]);
+  const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const token = localStorage.getItem('authToken');
-  
+  const token = localStorage.getItem("authToken");
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/cars", {
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept': 'application/json'
-      }
-    })
-    .then((response) => {
-      setCars(response.data);
-    })
-    .catch((error) => {
-      console.error("Error fetching cars:", error);
-      setError(error.response?.data?.message || 'Failed to load cars');
-    })
-    .finally(() => {
+    if (!token) {
+      setError("User not authenticated");
       setLoading(false);
-    });
-  }, []);
+      return;
+    }
 
-  if (loading) return <div className="text-center mt-5"><div className="spinner-border text-primary"></div></div>;
+    // Fetch authenticated user info first
+    axios
+      .get("http://localhost:8000/api/user", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/json",
+        },
+      })
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching user info:", error);
+        setError("Failed to get user info");
+      });
+
+    // Fetch available cars
+    axios
+      .get("http://localhost:8000/api/cars?is_available=true", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/json",
+        },
+      })
+      .then((response) => {
+        setCars(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching cars:", error);
+        setError(error.response?.data?.message || "Failed to load cars");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [token]);
+
+  if (loading)
+    return (
+      <div className="text-center mt-5">
+        <div className="spinner-border text-primary"></div>
+      </div>
+    );
   if (error) return <div className="alert alert-danger">{error}</div>;
 
   return (
@@ -40,7 +69,7 @@ export default function FindCar() {
             <div key={car.id} className="col-md-4 mb-4">
               <div className="card h-100">
                 <img
-                  src=''
+                  src={car.image || "https://via.placeholder.com/400x200?text=No+Image"}
                   className="card-img-top"
                   alt={car.model}
                   style={{ height: "200px", objectFit: "cover" }}
@@ -50,13 +79,23 @@ export default function FindCar() {
                     {car.brand} - {car.model}
                   </h5>
                   <p className="card-text">Year: {car.year}</p>
-                  <p className="card-text">
-                    Price Per Day: ${car.price_per_day}
-                  </p>
-                  <span className={`badge ${car.is_available ? "bg-success" : "bg-danger"} mb-3`}>
+                  <p className="card-text">Price Per Day: ${car.price_per_day}</p>
+                  <span
+                    className={`badge ${
+                      car.is_available ? "bg-success" : "bg-danger"
+                    } mb-3`}
+                  >
                     {car.is_available ? "Available" : "Not Available"}
                   </span>
-                  
+                  {user && (
+                    <Link
+                      to={"/Book"}
+                      state={{ carId: car.id, userId: user.id }}
+                      className="btn btn-primary mt-auto"
+                    >
+                      Book Now
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
