@@ -21,13 +21,13 @@ Route::prefix('api')->group(function () {
     Route::middleware('auth:sanctum')->group(function () {
         Route::post('/logout', [UserController::class, 'logout']); 
         Route::get('/profile', [UserController::class, 'profile']); 
-
-        // Add this route inside api prefix and auth middleware
-        Route::get('/user', [UserController::class, 'getUser']);
-
         Route::apiResource('/bookings', BookingController::class); 
         Route::apiResource('/cars', CarController::class); 
         Route::post('/contacts', [ContactController::class, 'store']); 
+
+        
+        // Add this route inside api prefix and auth middleware
+        Route::get('/user', [UserController::class, 'getUser']);
     });
 
 });

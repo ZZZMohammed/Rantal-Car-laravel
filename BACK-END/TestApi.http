@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
   "name": "Aouad mohammed",
-  "email": "user1@example.com",
+  "email": "user3@example.com",
   "password": "password123",
   "role": "user"
 }
@@ -44,7 +44,7 @@ Content-Type: application/json
 
 ### Get all cars 
 GET http://localhost:8000/api/cars?is_available=true
-Authorization: Bearer 32|dlWnai2yNoBmIzeklWIDp2p9CO2dSCOoOnWbBdUNf4b32a7e
+Authorization: Bearer 43|5umxnJ1F4EGugzwuyR45qI6AD0DQ47uR6G8GGLNPe00eb77d
 Accept: application/json
 
 
@@ -57,7 +57,7 @@ Content-Type: application/json
 {
   "brand": "Toyota",
   "model": "Corolla",
-  "year": 2020,
+  "year": 2021,
   "price_per_day": 50,
   "is_available": 1,
   "image": "https://example.com/toyota-corolla.jpg"
@@ -71,12 +71,12 @@ Accept: application/json
 
 ### Update a car 
 PUT http://localhost:8000/api/cars/71
-Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
+Authorization: Bearer 43|5umxnJ1F4EGugzwuyR45qI6AD0DQ47uR6G8GGLNPe00eb77d
 Accept: application/json
 Content-Type: application/json
 
 {
-  "brand":"hsi",
+  "brand":"yi",
 }
 
 ### Delete a car (requires authentication)
@@ -102,7 +102,7 @@ Content-Type: application/json
 
 ### Get all bookings 
 GET http://localhost:8000/api/bookings
-Authorization: Bearer 28|uDgExG5spMthDfb2MpN3BZLcjqZJPPzO9k3FQI4p603ad35b
+Authorization: Bearer 36|BP1IHcDZkcfvshcJuR4zKpoSlasNlEKd7unzfkgg5b93a941
 Accept: application/json
 
 
