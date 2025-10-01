@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
   "name": "Aouad mohammed",
-  "email": "user3@example.com",
+  "email": "user@example.com",
   "password": "password123",
   "role": "user"
 }
@@ -50,7 +50,7 @@ Accept: application/json
 
 ### Create a new car 
 POST http://localhost:8000/api/cars
-Authorization: Bearer 24|rEu9vh6XgukDv3mxXfCuat8UvPSieJ7wajwac1qYb3bdce2d
+Authorization: Bearer 1|IXwYit62TdIn0NcVQVXr1pZrRgrYaInlklwHXEyR399c3613
 Accept: application/json
 Content-Type: application/json
 
@@ -60,7 +60,7 @@ Content-Type: application/json
   "year": 2021,
   "price_per_day": 50,
   "is_available": 1,
-  "image": "https://example.com/toyota-corolla.jpg"
+  "image": "cars/car2.jpeg"
 }
 
 ### Get a specific car

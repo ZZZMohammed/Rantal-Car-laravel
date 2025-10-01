@@ -18,7 +18,7 @@ class CarFactory extends Factory
     public function definition(): array
     {
         return [
-            'image' => 'images/cars/' . Arr::random(['car2.jpeg', 'car3.jpeg', 'car4.jpeg' , 'car5.jpeg']),
+            'image' => 'cars/' . Arr::random(['car2.jpeg']),
             'brand' => $this->faker->randomElement(['Toyota', 'Honda', 'Ford', 'BMW', 'Audi']),
             'model' => $this->faker->word(),
             'year' => $this->faker->numberBetween(2010, 2023),

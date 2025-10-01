@@ -35,7 +35,7 @@ export default function Login() {
 
       // Redirect based on role
       if (data.user.role === 'admin') {
-        navigate('/cars');
+        navigate('/dashboard');
       } else {
         navigate('/');
       }

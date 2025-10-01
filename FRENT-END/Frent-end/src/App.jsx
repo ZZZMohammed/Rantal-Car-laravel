@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 import Book from "./pages/Book";
 import Login from "./pages/Login";
 import { Register } from "./pages/register";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/DASHBOARD/dashboard";
 import MyBookings from "./pages/MyBookings";
 import Cars from './pages/Cars'
 
